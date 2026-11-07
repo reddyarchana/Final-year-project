@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+	<li><a href="{{url_for('home')}}">Home</a></li>
+	<li class="colorlib-active"><a href="{{url_for('about')}}">About</a></li>
+	<li><a href="{{url_for('prediction')}}">Mental-health data</a></li>
+	<li><a href="{{url_for('result')}}">Suicide Data</a></li>
+	<li><a href="{{url_for('index')}}">Logout</a></li>
+{% endblock %}
+
+{% block content %}
+	<div id="colorlib-main">
+		<div class="colorlib-about">
+			<div class="colorlib-narrow-content">
+				<div class="row row-bottom-padded-md">
+					<h2 class="colorlib-heading">About</h2>
+					<div class="col-md-6">
+						<div class="about-img animate-box" data-animate-effect="fadeInLeft" style="background-image: url(/static/images/light-bulb-5947393_640.webp); width: 450px; height: 450px;">
+						</div>
+					</div>
+
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<div class="about-desc">
+							<p style="text-align: justify; color: black;">
+								This project utilizes text data and sentiment analysis techniques to predict mental health conditions and suicide risk. The first model classifies text data into five categories: Normal, Depression, Suicidal, Anxiety, and Bipolar, aiming to identify mental health states based on textual expressions. The second model focuses on detecting suicide risk, classifying text into Suicide and Non-Suicide categories. These models are built using machine learning algorithms, natural language processing (NLP) techniques, and sentiment analysis methods to analyze user-generated text.
+								The objective is to provide a reliable tool for mental health monitoring, helping in early identification of potential mental health disorders or suicide risks. By leveraging large-scale text data, the system aims to support research and intervention efforts for individuals suffering from mental health issues. This approach allows for improved classification and risk prediction, offering insights for professionals and researchers in the mental health field.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

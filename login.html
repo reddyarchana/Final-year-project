@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+	<li><a href="/">Home</a></li>
+	<li><a href="/register">Register</a></li>
+	<li class="colorlib-active"><a href="/login">Login</a></li>
+{% endblock %}
+
+{% block content %}
+	<div id="colorlib-main">
+		<div class="colorlib-contact">
+			<div class="colorlib-narrow-content">
+				<div class="row">
+					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+						<span class="heading-meta">Welocme to</span>
+						<h2 class="colorlib-heading">Login Page</h2>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5">
+						<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+							<div class="colorlib-icon" style="padding-left:100px;">
+							</div>
+							<a href="#">
+								<div class="colorlib-feature colorlib-feature-sm animate-box fadeInLeft animated" data-animate-effect="fadeInLeft" >
+									<img border="0" alt="W3Schools" src="/static/images/mental-health-7323725_640.webp" width="500" height="500">
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-md-7 col-md-push-1">
+						<div class="row" style="margin-top: 100px;">
+							<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+								<form action="{{url_for('login')}}" method="post">
+									
+									<div class="form-group">
+										<input type="email" name="email" class="form-control" placeholder="Email ID" required>
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" class="form-control" placeholder="Password" required>
+									</div>
+                                    
+									<div class="form-group">
+										<input type="submit" class="btn btn-primary btn-send-message" value="Submit">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
